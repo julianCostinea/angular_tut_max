@@ -6,10 +6,11 @@
 <hr />
 <div class="row">
   <div class="col-xs-12">
+    <!-- before on app-recipe-item used as an eventEmitter between recipe-item and recipe-list -->
+    <!-- (recipeSelected)="onRecipeSelected(recipeEl)" -->
     <app-recipe-item
       *ngFor="let recipeEl of recipes"
       [recipe]="recipeEl"
-      (recipeSelected)="onRecipeSelected(recipeEl)"
     ></app-recipe-item>
   </div>
 </div>
