@@ -6,6 +6,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
+  //now replaced with routerLink
   @Output() featureSelected = new EventEmitter<string>();
 
   onSelect(feature: string) {
