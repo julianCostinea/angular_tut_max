@@ -9,7 +9,6 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './recipe-detail.component.css',
 })
 export class RecipeDetailComponent {
-
   @Input() recipe: Recipe;
   id: number;
 
@@ -34,5 +33,10 @@ export class RecipeDetailComponent {
     //both ways work well
     // this.router.navigate(['edit'], { relativeTo: this.route });
     this.router.navigate(['../', this.id, 'edit'], { relativeTo: this.route });
+  }
+
+  onDeleteRecipe() {
+    this.recipeService.deleteRecipe(this.id);
+    this.router.navigate(['/recipes']);
   }
 }
