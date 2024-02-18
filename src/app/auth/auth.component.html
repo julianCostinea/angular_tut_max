@@ -1,8 +1,16 @@
+<ng-template appPlaceholder></ng-template>
 <div class="row">
   <div class="col-xs-12">
-    <div class="alert alert-danger" *ngIf="error">
+    <!-- use alert component instead of the following div -->
+    <!-- <div class="alert alert-danger" *ngIf="error">
       <p>{{ error }}</p>
-    </div>
+    </div> -->
+    <!-- added programatically by showErrorAlert method and appPlaceholder -->
+    <!-- <app-alert
+      [message]="error"
+      (close)="onHandleError()"
+      *ngIf="error"
+    ></app-alert> -->
     <div *ngIf="isLoading" style="text-align: center">
       <app-loading-spinner></app-loading-spinner>
     </div>
