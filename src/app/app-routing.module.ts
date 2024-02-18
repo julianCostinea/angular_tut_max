@@ -33,8 +33,10 @@ const appRoutes: Routes = [
   //     },
   //   ],
   // },
-  { path: 'shopping-list', component: ShoppingListComponent },
-  { path: 'auth', component: AuthComponent },
+  //now added in ShoppingListModule
+  // { path: 'shopping-list', component: ShoppingListComponent },
+  //moved to AuthModule
+  // { path: 'auth', component: AuthComponent },
 ];
 
 @NgModule({

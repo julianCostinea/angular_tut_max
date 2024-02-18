@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RecipesRoutingModule } from './recipes-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -21,18 +22,19 @@ import { RecipesRoutingModule } from './recipes-routing.module';
   ],
   imports: [
     RouterModule,
-    CommonModule,
+    // CommonModule,
     ReactiveFormsModule,
     RecipesRoutingModule,
+    SharedModule,
   ],
   //no need to export, since we use routing in recipes-routing.module and not in app-routing.module
-//   exports: [
-//     RecipesComponent,
-//     RecipeListComponent,
-//     RecipeDetailComponent,
-//     RecipeItemComponent,
-//     RecipeStartComponent,
-//     RecipeEditComponent,
-//   ],
+  //   exports: [
+  //     RecipesComponent,
+  //     RecipeListComponent,
+  //     RecipeDetailComponent,
+  //     RecipeItemComponent,
+  //     RecipeStartComponent,
+  //     RecipeEditComponent,
+  //   ],
 })
 export class RecipesModule {}
