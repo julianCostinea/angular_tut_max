@@ -9,7 +9,9 @@ import { RecipesComponent } from './recipes.component';
 
 const routes: Routes = [
   {
-    path: 'recipes',
+    // path: 'recipes',
+    //changed to empty string to make it lazy loaded
+    path: '',
     component: RecipesComponent,
     canActivate: [AuthGuard],
     children: [
